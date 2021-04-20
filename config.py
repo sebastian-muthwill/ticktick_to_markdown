@@ -30,5 +30,5 @@ created: {timestamp} \n \
 
 # Path where to store the markdown files
 # usually a folder within your obsidian vault
-md_path = "/Users/sebastian/Google Drive/10_Privat/40_ObsidianVault/Sebastian/INBOX/"
+md_path = "/ObsidianVault/INBOX/"
 
