@@ -8,14 +8,14 @@ for all the daily notes which I take. Since I dont want to copy the notes manual
 
 ## Features
 - reads tasks from TickTick.com and searchs for a specific tag (e.g. "note")
-- creates a markdown file for each flaged task
+- creates a markdown file for each taged task
 - embeds YoutTube video into markdown file if YouTube link is provided in note description
 - completes task after file creation
 
 ## Setup
 
 1. clone repository and provide your `username` and `password` as well as the `path` where markdown
-files shall be store in `config.py`
+files shall be stored in `config.py`
 2. install requirements.txt with `pip install -r requirements.txt``
 
 ## Run script
@@ -23,11 +23,17 @@ files shall be store in `config.py`
 Execute script with 
 ```python get_notes.py```
 
+### Schedule script execution on mac
+
+setup crontab with `crontab -e`and add following line to schedule every 15 minutes.
+
+```0,15,30,45 * * * * python /pathto/ticktick_to_markdown/get_notes.py```
+
 ## My workflow
 
 1. I create a task in my inbox and write down some notes when I´m on the go or on the iPad while watching youtube videos.
 2. add `#note` tag to task
-3. The script runs every hour on my Macbook. This is scheduled via cronjob and creates the notes in a obsidian folder INBOX so I can find new notes directly and process them further. Most of the time i just check if I would like to add something to it and move it to my folder "Second Brain"
+3. The script runs every 15 minutes on my Macbook. This is scheduled via cronjob and creates the notes in a obsidian folder INBOX so I can find new notes directly and process them further. Most of the time i just check if I would like to add something to it and move it to my folder "Second Brain"
 
 ## Screenshots
 TickTick task:
