@@ -39,12 +39,13 @@ for note in notes:
         start = str(content).find("://youtu.be/")
         yt_link = str(content)[start+12:start+23]
         print(yt_link)
-        #mdfile.new_header(level=2, title="Youtube")
-        mdfile.new_paragraph(f"""<iframe width="560" height="315" src="https://www.youtube.com/embed/{yt_link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>""")
+
+        yt_iframe = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/{}\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'.format(yt_link)
+        mdfile.new_paragraph(yt_iframe)
 
     mdfile.new_paragraph(content)
     mdfile.create_md_file()
 
-    # TODO: delete note if setup in config
+    # complete task if setup in config
     if config.ticktick_complete_note:
         client.task.complete(note.get('id'))
