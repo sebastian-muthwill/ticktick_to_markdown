@@ -43,3 +43,10 @@ TickTick task:
 Obsidian preview:
 
 ![obsidian_note_result.png](assets/obsidian_note_result.png)
+
+## feature ideas
+
+- make YouTube iframe creation optional
+- embed other pages
+
+If you encounter problems or have an feature request, create an issue.
